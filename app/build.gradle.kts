@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.liontail.arfind"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.liontail.arfind"
@@ -37,6 +37,9 @@ android {
 
 dependencies {
 
+    //material
+    implementation ("com.google.android.material:material:1.11.0")
+    //default
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
