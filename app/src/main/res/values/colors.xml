@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FAFAFA</color>
+
+    <color name="blackIcon">#374856</color>
+    <color name="grayArfind">#c7c7c7</color>
+
+    <color name="blackKiddo">#FF000000</color>
+    <color name="blueArfind">#0486FF</color>
+    <color name="whiteArfind">#f2efe4</color>
+    <color name="successArfind">#25d366</color>
+    <color name="pendingArfind">#f3eb0c</color>
+    <color name="failureArfind">#f52f41</color>
+    <color name="transparent">#00000000</color>
+</resources>
