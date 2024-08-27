@@ -1,7 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ARFind" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <style name="Base.Theme.ARFind" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorAccent">@color/whiteArfind</item>
+        <item name="colorPrimary">@color/blueArfind</item>
+        <item name="colorSecondary">@color/whiteArfind</item>
+        <item name="android:statusBarColor">@color/blueArfind</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="buttonStyle">@style/BlueButtonArfind</item>
     </style>
+    <style name="BottomNavTheme" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/whiteArfind</item>
+    </style>
+    <style name="Theme.Arfind" parent="Base.Theme.ARFind" />
 </resources>
