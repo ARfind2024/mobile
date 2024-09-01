@@ -71,7 +71,7 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTitulo, txtSubtitulo, txtPrecio;
+        TextView txtTitulo, txtSubtitulo;
         ImageView imgItem;
 
         public ViewHolder(@NonNull View itemView) {
