@@ -1,5 +1,6 @@
 package com.liontail.arfind.firebase.presenter
 
+import android.util.Log
 import com.liontail.arfind.firebase.singleton.DispositivoListSingleton
 import com.liontail.arfind.firebase.singleton.PlanListSingleton
 import kotlinx.coroutines.CoroutineScope
@@ -21,9 +22,9 @@ object SharedReferencesPresenter {
                 val resultadoDispositivos = cargarDispositivosDeferred.await()
 
                 if (resultadoPlanes && resultadoDispositivos) {
-
                     callback(true)
                 } else {
+                    Log.e("carga de shared", "Error en la carga: Planes: $resultadoPlanes, Dispositivos: $resultadoDispositivos")
                     callback(false)
                 }
             } catch (e: Exception) {
