@@ -38,7 +38,8 @@ android {
 }
 
 dependencies {
-
+    //picasso
+    implementation ("com.squareup.picasso:picasso:2.71828")
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
     implementation ("com.google.firebase:firebase-firestore:25.1.0")
@@ -46,6 +47,7 @@ dependencies {
     //material
     implementation ("com.google.android.material:material:1.11.0")
     //default
+    //noinspection GradleCompatible
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
