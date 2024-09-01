@@ -23,8 +23,8 @@ class DispositivoListSingleton private constructor() {
 
         suspend fun cargarAdicionalesAsync(): Boolean {
             return try {
-                val adicionales = DispositivoColeccion.obtenerDispositivosAsync().await()
-                getInstance()?.dispositivosDtos = adicionales
+                val dispositvos = DispositivoColeccion.obtenerDispositivosAsync().await()
+                getInstance()?.dispositivosDtos = dispositvos
                 true
             } catch (e: Exception) {
                 e.printStackTrace()
