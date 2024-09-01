@@ -38,8 +38,11 @@ android {
 }
 
 dependencies {
+    //OkHTTP
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
     //location
     implementation ("com.google.android.gms:play-services-location:21.0.1")
+    implementation ("com.google.android.gms:play-services-maps:19.0.0")
     //picasso
     implementation ("com.squareup.picasso:picasso:2.71828")
     //firebase
@@ -49,7 +52,7 @@ dependencies {
     //material
     implementation ("com.google.android.material:material:1.11.0")
     //default
-    //noinspection GradleCompatible
+    //noinspection GradleCompatible,GradleCompatible
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
