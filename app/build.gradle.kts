@@ -38,6 +38,8 @@ android {
 }
 
 dependencies {
+    //location
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
     //picasso
     implementation ("com.squareup.picasso:picasso:2.71828")
     //firebase
