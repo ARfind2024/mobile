@@ -13,8 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.liontail.arfind.DetallePlanActivity;
 import com.liontail.arfind.R;
 import com.liontail.arfind.firebase.dto.PlanDto;
+import com.liontail.arfind.utils.BotonUtil;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -54,13 +56,13 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //BotonUtil.INSTANCE.deshabilitarPorTiempo(holder.itemView);
-                //Intent intent = new Intent(context, DetailAddActivity.class);
+                BotonUtil.INSTANCE.deshabilitarPorTiempo(holder.itemView);
+                Intent intent = new Intent(context, DetallePlanActivity.class);
                 //intent.putExtra("tipo", 2);
                 //intent.putExtra("consumibleId", chicken.getId());
-                //Activity activity = (Activity) context;
-                //activity.overridePendingTransition(R.anim.slide_out_left, 0);
-                //activity.startActivity(intent);
+                Activity activity = (Activity) context;
+                activity.overridePendingTransition(R.anim.slide_out_left, 0);
+                activity.startActivity(intent);
             }
         });
     }
