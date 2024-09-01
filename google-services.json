@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "90890272483",
+    "project_id": "arfind",
+    "storage_bucket": "arfind.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90890272483:android:4fece35b60db3f4503cfd6",
+        "android_client_info": {
+          "package_name": "com.liontail.arfind"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDq2ZYMX6X8NF6wUs2DhWnac-QkOaOqbM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
