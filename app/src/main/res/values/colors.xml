@@ -4,11 +4,11 @@
     <color name="white">#FAFAFA</color>
 
     <color name="blackIcon">#374856</color>
-    <color name="grayArfind">#c7c7c7</color>
+    <color name="grayArfind">#f3f4f8</color>
 
     <color name="blackKiddo">#FF000000</color>
     <color name="blueArfind">#0486FF</color>
-    <color name="whiteArfind">#f2efe4</color>
+    <color name="whiteArfind">#FAFAFA</color>
     <color name="successArfind">#25d366</color>
     <color name="pendingArfind">#f3eb0c</color>
     <color name="failureArfind">#f52f41</color>
