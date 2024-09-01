@@ -2,14 +2,14 @@ package com.liontail.arfind.firebase.coleccion;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.liontail.arfind.firebase.dto.DispositivoDto;
+
 import com.liontail.arfind.firebase.dto.PlanDto;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class PlaneColeccion {
+public class PlanColeccion {
     private static final String COLLECTION_PLAN = "planes";
     private static final FirebaseFirestore db = FirebaseFirestore.getInstance();
 

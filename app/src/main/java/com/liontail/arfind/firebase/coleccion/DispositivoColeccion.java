@@ -3,7 +3,7 @@ package com.liontail.arfind.firebase.coleccion;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.liontail.arfind.firebase.dto.DispositivoDto;
-import com.liontail.arfind.firebase.dto.UsuarioDto;
+
 
 import java.util.ArrayList;
 import java.util.List;

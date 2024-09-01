@@ -3,7 +3,7 @@ package com.liontail.arfind.firebase.dto;
 import com.google.firebase.Timestamp;
 
 public class UsuarioDto {
-
+    private String id;
     private String apellido;
     private String nombre;
     private String correo;

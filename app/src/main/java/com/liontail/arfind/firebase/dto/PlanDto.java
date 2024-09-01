@@ -1,6 +1,7 @@
 package com.liontail.arfind.firebase.dto;
 
 public class PlanDto {
+    private String id;
 
     private String titulo;
     private String descripcion;

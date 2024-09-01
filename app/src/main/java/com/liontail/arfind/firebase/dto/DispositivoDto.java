@@ -4,7 +4,7 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.GeoPoint;
 
 public class DispositivoDto {
-
+    private String id;
     private Timestamp fecha_creacion;
     private String plan;
     private String telefono;
