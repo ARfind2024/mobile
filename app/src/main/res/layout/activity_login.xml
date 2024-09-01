@@ -70,7 +70,14 @@
             android:layout_margin="10dp"
             android:text="Ingresar" />
 
-
+        <TextView
+            android:id="@+id/txtRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿No tenes una cuenta? Registrate aqui"
+            android:textAlignment="center"
+            android:textColor="@color/blueArfind"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
