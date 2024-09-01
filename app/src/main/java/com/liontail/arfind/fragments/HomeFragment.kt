@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
         recyclerViewPlanes = view?.findViewById(R.id.recycler_planes)
 
         recyclerViewPlanes?.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             cargarPlanes()
         }
         return view
