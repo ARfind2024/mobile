@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.liontail.arfind.fragments.HomeFragment
+import com.liontail.arfind.fragments.MapFragment
 import com.liontail.arfind.utils.NetworkUtils
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     private fun handleItemSelected(itemId: Int): Boolean {
         val selectedFragment = when (itemId) {
             R.id.action_home -> HomeFragment()
-            //R.id.action_pedidos -> MapFragment()
+            R.id.action_pedidos -> MapFragment()
             //R.id.action_perfil -> MasFragment()
             else -> null
         }
