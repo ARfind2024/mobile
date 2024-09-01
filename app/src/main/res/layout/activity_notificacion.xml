@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/linear_volver"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"

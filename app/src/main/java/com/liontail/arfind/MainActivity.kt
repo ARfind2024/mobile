@@ -1,7 +1,9 @@
 package com.liontail.arfind
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import com.liontail.arfind.utils.NetworkUtils
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +13,17 @@ class MainActivity : AppCompatActivity() {
         if (!NetworkUtils.isNetworkAvailable(this)) {
             NetworkUtils.redirectToNoInternetActivity(this)
         }
+        val  linearCampana = findViewById<LinearLayout>(R.id.linear_campana)
+
+        linearCampana.setOnClickListener{
+            val intent = Intent(this, NotificacionActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
+
+
 
     }
 }
