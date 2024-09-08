@@ -3,29 +3,29 @@ package com.liontail.arfind.firebase.coleccion;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-import com.liontail.arfind.firebase.dto.PlanDto;
+import com.liontail.arfind.firebase.dto.ProductoDto;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class PlanColeccion {
-    private static final String COLLECTION_PLAN = "planes";
+public class ProductoColeccion {
+    private static final String COLLECTION_PRODUCTO = "productos";
     private static final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    public static CompletableFuture<List<PlanDto>> obtenerPlanesAsync() {
-        CompletableFuture<List<PlanDto>> future = new CompletableFuture<>();
+    public static CompletableFuture<List<ProductoDto>> obtenerProductosAsync() {
+        CompletableFuture<List<ProductoDto>> future = new CompletableFuture<>();
 
-        db.collection(COLLECTION_PLAN)
+        db.collection(COLLECTION_PRODUCTO)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        List<PlanDto> planes = new ArrayList<>();
+                        List<ProductoDto> productos = new ArrayList<>();
                         for (QueryDocumentSnapshot document : task.getResult()) {
-                            PlanDto plan = document.toObject(PlanDto.class);
-                            planes.add(plan);
+                            ProductoDto producto = document.toObject(ProductoDto.class);
+                            productos.add(producto);
                         }
-                        future.complete(planes);
+                        future.complete(productos);
                     } else {
                         future.completeExceptionally(task.getException());
                     }

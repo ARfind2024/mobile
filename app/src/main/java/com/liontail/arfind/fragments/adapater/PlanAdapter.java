@@ -13,9 +13,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.liontail.arfind.DetallePlanActivity;
+import com.liontail.arfind.DetalleProductoActivity;
 import com.liontail.arfind.R;
-import com.liontail.arfind.firebase.dto.PlanDto;
+import com.liontail.arfind.firebase.dto.ProductoDto;
 import com.liontail.arfind.utils.BotonUtil;
 import com.squareup.picasso.Picasso;
 
@@ -24,9 +24,9 @@ import java.util.List;
 public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
 
     private Context context;
-    private List<PlanDto> planList;
+    private List<ProductoDto> planList;
 
-    public PlanAdapter(Context context, List<PlanDto> planList) {
+    public PlanAdapter(Context context, List<ProductoDto> planList) {
         this.context = context;
         this.planList = planList;
     }
@@ -34,14 +34,14 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.card_plan, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.card_producto, parent, false);
         return new ViewHolder(view);
     }
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PlanDto plan = planList.get(position);
+        ProductoDto plan = planList.get(position);
         holder.txtTitulo.setText(plan.getTitulo());
         holder.txtSubtitulo.setText(plan.getDescripcion());
         // Aquí puedes cargar la imagen utilizando alguna librería como Picasso o Glide
@@ -57,7 +57,7 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 BotonUtil.INSTANCE.deshabilitarPorTiempo(holder.itemView);
-                Intent intent = new Intent(context, DetallePlanActivity.class);
+                Intent intent = new Intent(context, DetalleProductoActivity.class);
                 //intent.putExtra("tipo", 2);
                 //intent.putExtra("consumibleId", chicken.getId());
                 Activity activity = (Activity) context;

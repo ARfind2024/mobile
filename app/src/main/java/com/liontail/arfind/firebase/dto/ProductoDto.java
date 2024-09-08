@@ -1,16 +1,16 @@
 package com.liontail.arfind.firebase.dto;
 
-public class PlanDto {
+public class ProductoDto {
     private String id;
     private String titulo;
     private String descripcion;
     private String imagen;
 
-    public PlanDto(){
+    public ProductoDto(){
 
     }
 
-    public PlanDto(String titulo, String descripcion, String imagen) {
+    public ProductoDto(String titulo, String descripcion, String imagen) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imagen = imagen;

@@ -2,7 +2,7 @@ package com.liontail.arfind.firebase.presenter
 
 import android.util.Log
 import com.liontail.arfind.firebase.singleton.DispositivoListSingleton
-import com.liontail.arfind.firebase.singleton.PlanListSingleton
+import com.liontail.arfind.firebase.singleton.ProductoListSingleton
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -13,18 +13,18 @@ object SharedReferencesPresenter {
         CoroutineScope(Dispatchers.Main).launch {
             try {
                 // Ejecutar las operaciones asincrónicas en paralelo
-                val cargarPlanesDeferred = async { PlanListSingleton.cargarPlanesAsync() }
+                val cargarProductosDeferred = async { ProductoListSingleton.cargarProductosAsync() }
                 val cargarDispositivosDeferred = async { DispositivoListSingleton.cargarAdicionalesAsync() }
 
 
                 // Esperar a que todas las operaciones se completen
-                val resultadoPlanes = cargarPlanesDeferred.await()
+                val resultadoProductos = cargarProductosDeferred.await()
                 val resultadoDispositivos = cargarDispositivosDeferred.await()
 
-                if (resultadoPlanes && resultadoDispositivos) {
+                if (resultadoProductos && resultadoDispositivos) {
                     callback(true)
                 } else {
-                    Log.e("carga de shared", "Error en la carga: Planes: $resultadoPlanes, Dispositivos: $resultadoDispositivos")
+                    Log.e("carga de shared", "Error en la carga: Planes: $resultadoProductos, Dispositivos: $resultadoDispositivos")
                     callback(false)
                 }
             } catch (e: Exception) {

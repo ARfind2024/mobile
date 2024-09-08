@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.liontail.arfind.R
-import com.liontail.arfind.firebase.singleton.PlanListSingleton
+import com.liontail.arfind.firebase.singleton.ProductoListSingleton
 import com.liontail.arfind.fragments.adapater.PlanAdapter
 
 class HomeFragment : Fragment() {
@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
 
 
     private fun cargarPlanes() {
-        val planes = PlanListSingleton.getInstance()
+        val planes = ProductoListSingleton.getInstance()
 
         if (planes != null) {
             planAdapter = PlanAdapter(requireActivity(), planes.lplanDtos)

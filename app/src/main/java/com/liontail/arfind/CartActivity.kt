@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.LinearLayout
 
 class CartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +21,7 @@ class CartActivity : AppCompatActivity() {
         }
 
         ctnBackProfile.setOnClickListener{
-            val intent = Intent(this, DetallePlanActivity::class.java)
+            val intent = Intent(this, DetalleProductoActivity::class.java)
             startActivity(intent)
             finish()
         }

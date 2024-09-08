@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/whiteArfind"
-    tools:context=".DetallePlanActivity">
+    tools:context=".DetalleProductoActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -57,7 +57,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="15dp"
                     android:fontFamily="@font/manrope_extrabold"
-                    android:text="Nombre Plan"
+                    android:text="Nombre Productos"
                     android:textColor="@color/blackIcon"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/manrope_medium"
-                android:text="Tu plan"
+                android:text="Tu plan + producto"
                 android:textColor="@color/blackIcon"
                 android:textSize="18sp"
                 android:textStyle="bold" />

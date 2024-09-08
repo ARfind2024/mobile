@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.liontail.arfind.R;
 import com.liontail.arfind.firebase.dto.DispositivoDto;
-import com.liontail.arfind.firebase.dto.PlanDto;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -31,7 +29,7 @@ public class DispositivoAdapter  extends RecyclerView.Adapter<DispositivoAdapter
     @NonNull
     @Override
     public DispositivoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.card_plan, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.card_producto, parent, false);
         return new DispositivoAdapter.ViewHolder(view);
     }
 

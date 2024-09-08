@@ -29,7 +29,7 @@
             android:name=".CartActivity"
             android:exported="false" />
         <activity
-            android:name=".DetallePlanActivity"
+            android:name=".DetalleProductoActivity"
             android:exported="false" />
 
         <meta-data
