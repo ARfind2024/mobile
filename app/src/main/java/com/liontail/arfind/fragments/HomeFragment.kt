@@ -8,13 +8,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.liontail.arfind.R
 import com.liontail.arfind.firebase.singleton.ProductoListSingleton
-import com.liontail.arfind.fragments.adapater.PlanAdapter
+import com.liontail.arfind.fragments.adapater.ProductoAdapter
 
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
 
-    private var recyclerViewPlanes: RecyclerView? = null
-    private var planAdapter: PlanAdapter? = null
+    private var recyclerViewProductos: RecyclerView? = null
+    private var productoAdapter: ProductoAdapter? = null
 
 
     override fun onCreateView(
@@ -25,11 +25,11 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        recyclerViewPlanes = view?.findViewById(R.id.recycler_planes)
+        recyclerViewProductos = view?.findViewById(R.id.recycler_productos)
 
-        recyclerViewPlanes?.apply {
+        recyclerViewProductos?.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            cargarPlanes()
+            cargarProductos()
         }
         return view
 
@@ -37,12 +37,15 @@ class HomeFragment : Fragment() {
 
 
 
-    private fun cargarPlanes() {
+    private fun cargarProductos() {
         val planes = ProductoListSingleton.getInstance()
 
         if (planes != null) {
-            planAdapter = PlanAdapter(requireActivity(), planes.lplanDtos)
-            recyclerViewPlanes!!.adapter = planAdapter
+            productoAdapter = ProductoAdapter(
+                requireActivity(),
+                planes.lproductosDtos
+            )
+            recyclerViewProductos!!.adapter = productoAdapter
         } else {
         }
     }

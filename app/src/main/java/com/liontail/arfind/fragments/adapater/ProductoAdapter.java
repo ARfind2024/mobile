@@ -21,14 +21,14 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
+public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHolder> {
 
     private Context context;
-    private List<ProductoDto> planList;
+    private List<ProductoDto> productoList;
 
-    public PlanAdapter(Context context, List<ProductoDto> planList) {
+    public ProductoAdapter(Context context, List<ProductoDto> planList) {
         this.context = context;
-        this.planList = planList;
+        this.productoList = planList;
     }
 
     @NonNull
@@ -41,12 +41,12 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ProductoDto plan = planList.get(position);
-        holder.txtTitulo.setText(plan.getTitulo());
-        holder.txtSubtitulo.setText(plan.getDescripcion());
+        ProductoDto producto = productoList.get(position);
+        holder.txtTitulo.setText(producto.getTitulo());
+        holder.txtSubtitulo.setText(producto.getDescripcion());
         // Aquí puedes cargar la imagen utilizando alguna librería como Picasso o Glide
         // Por ejemplo:
-        String imageUrl = plan.getImagen();
+        String imageUrl = producto.getImagen();
         if (imageUrl != null && !imageUrl.isEmpty()) {
             Picasso.get().load(imageUrl).into(holder.imgItem);
         } else {
@@ -69,7 +69,7 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return planList.size();
+        return productoList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
