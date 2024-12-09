@@ -1,12 +1,11 @@
 package com.liontail.arfind.firebase.singleton
 
-import com.liontail.arfind.firebase.coleccion.DispositivoColeccion
-import com.liontail.arfind.firebase.dto.DispositivoDto
+import com.liontail.arfind.dispositivos.DispositivoColeccion
+import com.liontail.arfind.dispositivos.DispositivoDto
 import kotlinx.coroutines.future.await
 
 class DispositivoListSingleton private constructor() {
     var dispositivosDtos: List<DispositivoDto>? = null
-
     companion object {
         private var instance: DispositivoListSingleton? = null
         @Synchronized
@@ -16,14 +15,12 @@ class DispositivoListSingleton private constructor() {
             }
             return instance
         }
-
         fun destroyInstance() {
             instance = null
         }
-
-        suspend fun cargarAdicionalesAsync(): Boolean {
+        suspend fun cargarDispositivosAsync(): Boolean {
             return try {
-                val dispositvos = DispositivoColeccion.obtenerDispositivosAsync().await()
+                val dispositvos = DispositivoColeccion.obtenerDispositivosByUsuarioAsync().await()
                 getInstance()?.dispositivosDtos = dispositvos
                 true
             } catch (e: Exception) {
@@ -31,12 +28,8 @@ class DispositivoListSingleton private constructor() {
                 false
             }
         }
-
         fun obtenerDispositivos(): List<DispositivoDto>? {
             return DispositivoListSingleton.getInstance()?.dispositivosDtos
         }
-
-
-
     }
 }

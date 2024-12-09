@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet_bg">
+
+    <TextView
+        android:id="@+id/choosetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/manrope_extrabold"
+        android:text="CAMBIAR PLAN"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutEdit"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- RadioGroup para las opciones -->
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCambiarPlan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/blueArfind"
+            android:fontFamily="@font/manrope_extrabold"
+            android:layout_marginTop="20dp"
+            android:text="Cambiar"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

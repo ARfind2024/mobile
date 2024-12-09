@@ -11,6 +11,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-1dp"
         android:background="@drawable/card_border_log"
         android:elevation="5dp"
         android:orientation="vertical"
@@ -39,9 +40,10 @@
             android:hint="Correo electronico">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blackIcon"/>
+                android:textColor="@color/blackIcon" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,10 +56,11 @@
             android:hint="Contraseña">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blackIcon"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textColor="@color/blackIcon" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,6 +77,7 @@
             android:id="@+id/txtRegistrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:text="¿No tenes una cuenta? Registrate aqui"
             android:textAlignment="center"
             android:textColor="@color/blueArfind"

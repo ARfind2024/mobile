@@ -41,19 +41,29 @@ android {
 }
 
 dependencies {
+    //Firebase Auth
+    implementation ("com.google.firebase:firebase-auth:23.1.0")
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    //Gson
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     //OkHTTP
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     //location
-    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    implementation ("com.google.android.gms:play-services-location:21.3.0")
     implementation ("com.google.android.gms:play-services-maps:19.0.0")
     //picasso
     implementation ("com.squareup.picasso:picasso:2.71828")
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
+    //implementation ("com.google.firebase:firebase-auth:23.6.0'")
     implementation ("com.google.firebase:firebase-firestore:25.1.0")
     implementation("com.google.firebase:firebase-analytics")
     //material
     implementation ("com.google.android.material:material:1.11.0")
+
+    implementation ("androidx.fragment:fragment:1.5.5")
+
     //default
     //noinspection GradleCompatible,GradleCompatible
     implementation("androidx.core:core-ktx:1.9.0")

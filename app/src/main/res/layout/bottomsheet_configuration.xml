@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet_bg">
+
+    <TextView
+        android:id="@+id/choosetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/manrope_extrabold"
+        android:text="Configuracion"
+        android:textColor="@color/blueArfind"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:backgroundTint="@color/blueArfind"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/ly_cambiar_apodo"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_cambiar_apodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Cambiar apodo" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ly_compartir_dispositivos"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_generar_dispositivos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Generar Codigo" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ly_cambiar_plan"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_cambiar_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Cambiar plan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_eliminar_compartido"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_eliminar_compartido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Eliminar usuario compartido" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ly_cancelar_plan"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_cancelar_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/failureArfind"
+            android:text="Cancelar plan" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+</LinearLayout>

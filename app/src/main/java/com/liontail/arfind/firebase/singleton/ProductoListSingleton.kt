@@ -1,7 +1,7 @@
 package com.liontail.arfind.firebase.singleton
 
-import com.liontail.arfind.firebase.coleccion.ProductoColeccion
-import com.liontail.arfind.firebase.dto.ProductoDto
+
+import com.liontail.arfind.productos.ProductoDto
 import kotlinx.coroutines.future.await
 
 class ProductoListSingleton private constructor() {
@@ -35,8 +35,6 @@ class ProductoListSingleton private constructor() {
         fun obtenerProductos(): List<ProductoDto>? {
             return ProductoListSingleton.getInstance()?.lproductosDtos
         }
-
-
 
     }
 }

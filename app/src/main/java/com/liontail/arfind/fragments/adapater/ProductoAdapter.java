@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.liontail.arfind.DetalleProductoActivity;
 import com.liontail.arfind.R;
-import com.liontail.arfind.firebase.dto.ProductoDto;
+import com.liontail.arfind.productos.ProductoDto;
 import com.liontail.arfind.utils.BotonUtil;
 import com.squareup.picasso.Picasso;
 
@@ -40,7 +40,7 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ProductoDto producto = productoList.get(position);
         holder.txtTitulo.setText(producto.getTitulo());
         holder.txtSubtitulo.setText(producto.getDescripcion());
@@ -58,8 +58,8 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
             public void onClick(View v) {
                 BotonUtil.INSTANCE.deshabilitarPorTiempo(holder.itemView);
                 Intent intent = new Intent(context, DetalleProductoActivity.class);
-                //intent.putExtra("tipo", 2);
-                //intent.putExtra("consumibleId", chicken.getId());
+                intent.putExtra("producto_position", position);
+
                 Activity activity = (Activity) context;
                 activity.overridePendingTransition(R.anim.slide_out_left, 0);
                 activity.startActivity(intent);

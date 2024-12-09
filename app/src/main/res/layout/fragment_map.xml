@@ -1,9 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="1000dp"
-    tools:context=".fragments.MapFragment" />
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Contenedor del mapa -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_weight="1" />
+
+        <!-- Panel deslizante -->
+        <LinearLayout
+            android:id="@+id/country_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+
+            <!-- Aca quiero el divider -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blueArfind" />
+
+            <!-- Botón para cerrar el panel -->
+            <TextView
+                android:id="@+id/okok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dispositivos"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_gravity="end"
+                />
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

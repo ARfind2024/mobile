@@ -9,5 +9,13 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <style name="WhiteButtonArfind" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_white_button</item>
+        <item name="android:textColor">@color/whiteArfind</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:fontFamily">@font/manrope_extrabold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
 
 </resources>

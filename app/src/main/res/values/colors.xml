@@ -6,11 +6,13 @@
     <color name="blackIcon">#374856</color>
     <color name="grayArfind">#f3f4f8</color>
 
+    <color name="grayArfind2">#717171</color>
+
     <color name="blackKiddo">#FF000000</color>
     <color name="blueArfind">#0486FF</color>
     <color name="whiteArfind">#FAFAFA</color>
     <color name="successArfind">#25d366</color>
-    <color name="pendingArfind">#f3eb0c</color>
-    <color name="failureArfind">#f52f41</color>
+    <color name="pendingArfind">#F3C10C</color>
+    <color name="failureArfind">#ef5350</color>
     <color name="transparent">#00000000</color>
 </resources>

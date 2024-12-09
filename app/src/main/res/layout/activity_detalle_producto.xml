@@ -59,7 +59,7 @@
                     android:fontFamily="@font/manrope_extrabold"
                     android:text="Nombre Productos"
                     android:textColor="@color/blackIcon"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -88,6 +88,18 @@
                     android:textStyle="bold"
                     android:layout_marginBottom="20dp" />
             </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_planes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_producto"
+                tools:listitem="@layout/item_plan" />
 
 
         </LinearLayout>
@@ -140,14 +152,14 @@
             android:paddingBottom="10dp">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/txt_total_a_pagar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/manrope_medium"
                 android:text="Tu plan + producto"
                 android:textColor="@color/blackIcon"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -172,7 +184,7 @@
             android:paddingBottom="10dp">
 
             <Button
-                android:id="@+id/btn_continuar"
+                android:id="@+id/btn_agregar_compartido"
                 style="@style/BlueButtonArfind"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -180,7 +192,7 @@
                 android:layout_weight="1"
                 android:elevation="0dp"
                 android:fontFamily="@font/manrope_medium"
-                android:text="Agregar"
+                android:text="Comprar"
                 android:textStyle="bold"
                 />
         </LinearLayout>

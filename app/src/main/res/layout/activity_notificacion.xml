@@ -61,22 +61,14 @@
             android:layout_height="match_parent"
             android:gravity="center|end"
             android:orientation="vertical"
-            android:padding="10dp">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_config"
-                app:tint="@color/whiteArfind" />
-        </LinearLayout>
+            android:padding="10dp"/>
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="659dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,6 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaNotifiaciones"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

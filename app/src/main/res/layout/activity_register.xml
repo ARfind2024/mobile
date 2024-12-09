@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".register.RegisterActivity"
     android:background="@color/blueArfind">
 
     <LinearLayout
@@ -164,7 +164,13 @@
                         android:textColor="@color/blackIcon"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
-
+                <TextView
+                    android:id="@+id/txt_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/failureArfind"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
 
                 <Button
                     android:id="@+id/btn_register_confirmar"
@@ -177,14 +183,6 @@
             </LinearLayout>
         </ScrollView>
 
-
-
-
-
-
-
-
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -19,15 +20,55 @@
         android:theme="@style/Base.Theme.ARFind"
         tools:targetApi="31">
         <activity
-            android:name=".ConfirmationCodeActivity"
+            android:name=".mercadopago.PendingCongratsActivity"
             android:exported="false" />
-
         <activity
-            android:name=".RegisterActivity"
+            android:name=".mercadopago.IncongratsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register.TerminoRegister"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mercadopago.CongratsActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="airfind-retorno-pago"
+                    android:scheme="tuapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register.ConfirmationCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".CartActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Reemplaza 'yourapp' y 'congrats' con valores relevantes para tu aplicación -->
+                <data
+                    android:host="carrito_compras"
+                    android:scheme="airfind" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".DetalleProductoActivity"
             android:exported="false" />
